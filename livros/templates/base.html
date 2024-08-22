@@ -1,0 +1,69 @@
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'livros/css/styles.css' %}">
+    <title>Title</title>
+</head>
+<body>
+
+         <div class="row">
+              <nav class="navbar navbar-dark bg-dark ">
+                <span class="navbar-brand mb-0 h1">Vem Ler</span>
+              </nav>
+         </div>
+         <div class="row justify-content-center">
+             <nav class="navbar navbar-expand-lg navbar-dark nav_color shadow">
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse justify-content-sm-center" id="conteudoNavbarSuportado">
+                <ul class="navbar-nav mr-auto ">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'livros_form' %}">CADASTRO DE NOVOS LIVROS</a>
+                  </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'livros_list' %}">INICIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'livros_list' %}">MAIS VENDIDOS</a>
+                  </li>
+                   <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'livros_list' %}">LANÇAMENTOS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'livros_list' %}">DESTAQUES</a>
+                  </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'livros_list' %}">CENTRAL DE AJUDA</a>
+                  </li>
+
+                </ul>
+              </div>
+            </nav>
+         </div>
+
+
+
+
+    <main class="container">
+        {%  block content %}
+
+
+        {% endblock %}
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+* {
+  margin: 0 ;
+  padding: 0;
+
+}
+
+
+.img_livro{
+
+    heigth: 50vh !import;
+}
+
+.nav_color{
+    background-color: #353b48 !important;
+    color: #ffff !important;
+    height: 50vh !import;
+}
+
+h1{
+margin-left: 20
+}
+h5{
+text-align: center
+}
+
+
+span{
+margin-left:50
+}

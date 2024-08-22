@@ -1,0 +1,21 @@
+
+{% extends 'base.html'%}
+
+{% block content %}
+        <div class="row ">
+            {% for livro in livros_list %}
+                    <div class="col-4 mt-5">
+                        <div class="card" style="width: 18rem;">
+                          <img class="img_livro" src="{{livro.imagem}}" alt="Imagem de capa do card">
+                          <div class="card-body">
+                              <h5 class="card-title"> {{ livro.nome }}</h5>
+                              <h5 class="card-title"> {{ livro.autor }}</h5>
+                              <h5 class="card-title">{{ livro.publicado_em }}</h5>
+                              <a type="button" class="btn btn-dark btn-block">Excluir</a>
+                          </div>
+                        </div>
+                    </div>
+            {% endfor %}
+        </div>
+
+{% endblock %}
