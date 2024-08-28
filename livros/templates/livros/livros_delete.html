@@ -1,0 +1,22 @@
+{%  extends 'base.html' %}
+
+{% block content%}
+<div class="justify-content-center">
+
+        <h1>Deletar Livro</h1>
+        <p>Tem certeza que deseja deletar o livro{{ livro.title }}?</p>
+
+        <div class="row">
+            <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger ">Deletar</button>
+                 <a href="{% url 'livros_list' %}" class="btn btn-primary">Cancelar</a>
+        </form>
+
+        </div>
+
+
+</div>
+
+
+{% endblock content %}

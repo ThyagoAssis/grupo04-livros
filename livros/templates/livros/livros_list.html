@@ -11,11 +11,14 @@
                               <h5 class="card-title"> {{ livro.nome }}</h5>
                               <h5 class="card-title"> {{ livro.autor }}</h5>
                               <h5 class="card-title">{{ livro.publicado_em }}</h5>
-                              <a type="button" class="btn btn-dark btn-block">Excluir</a>
+                              <a href="{% url 'livros_delete' livro.pk %}"  class="btn btn-dark btn-block"> Excluir</a>
+                              <a href=" {% url 'livros_edicao' livro.pk %}" class="btn btn-dark btn-block">Editar</a>
                           </div>
                         </div>
                     </div>
             {% endfor %}
         </div>
+
+        <!-- Modal -->
 
 {% endblock %}
