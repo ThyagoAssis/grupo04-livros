@@ -19,47 +19,15 @@
                 <span class="navbar-brand mb-0 h1">Vem Ler</span>
               </nav>
          </div>
-         <div class="row justify-content-center">
-             <nav class="navbar navbar-expand-lg navbar-dark nav_color shadow">
-
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse justify-content-sm-center" id="conteudoNavbarSuportado">
-                <ul class="navbar-nav mr-auto ">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'livros_form' %}">CADASTRO DE NOVOS LIVROS</a>
-                  </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="{% url 'livros_list' %}">INICIO</a>
-                  </li>
-                   <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'livros_lan' %}">LANÇAMENTOS</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-         </div>
+        {% include 'componentes/header.html'%}
         </header>
 
 
-        <main class="container" >
+        <main class="justify-content-sm-center">
             {%  block content %}{% endblock %}
         </main>
 
-        <footer>
-             <div class="footer">
-                    <h2>Vem Ler</h2>
-                    <p><strong>www.vemler.com.br</strong></p>
 
-                    <p>Edição: 2024</p>
-                    <p>Editora: Vem Ler</p>
-                    <p>ISBN: 159753</p>
-                    <p>Todos os direitos reservados © 2024 Heitor, Alexander e Sara.</p>
-                    <p>Nenhuma parte deste site pode ser reproduzida sem autorização expressa.</p>
-                </div>
-        </footer>
 
 
 
